@@ -1,5 +1,4 @@
 name: GitHub Pages
-name: Node.js CI
 on: push
 jobs:
   build:
@@ -15,4 +14,3 @@ jobs:
     - run: cd dist
     - name: Configure Github Pages
       uses: actions/configure-pages@v5.0.0
-      
