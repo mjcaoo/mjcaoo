@@ -9,6 +9,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 22
+    - run: cd vue-project && npm run install
     - run: cd vue-project && npm run build
     - name: Configure Github Pages
       uses: actions/configure-pages@v5.0.0
