@@ -9,7 +9,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 22
-    - run: cd vue-project && npm run install
+    - run: cd vue-project && npm install
     - run: cd vue-project && npm run build
-    - name: Configure Github Pages
-      uses: actions/configure-pages@v5.0.0
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: vue-project/dist
